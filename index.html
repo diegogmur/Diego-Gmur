@@ -1,0 +1,206 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diego Gmür | Direito & Negócios</title>
+
+<style>
+:root {
+    --primary: #0f172a;
+    --secondary: #1e293b;
+    --accent: #2563eb;
+    --light: #f8fafc;
+    --text: #334155;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background: var(--light);
+    color: var(--text);
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+}
+
+header img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.4em;
+    margin: 10px 0;
+}
+
+header p {
+    font-size: 1.15em;
+    opacity: 0.9;
+}
+
+.lang-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.lang-switch button {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 6px 12px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.lang-switch button:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: white;
+    padding: 40px;
+    margin-bottom: 35px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    margin-top: 0;
+    color: var(--primary);
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+    font-size: 0.9em;
+}
+
+/* Language control */
+[data-lang] {
+    display: none;
+}
+[data-lang].active {
+    display: block;
+}
+</style>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.remove('active');
+    });
+    document.querySelectorAll('[data-lang="'+lang+'"]').forEach(el => {
+        el.classList.add('active');
+    });
+}
+</script>
+
+</head>
+<body>
+
+<header>
+    <div class="lang-switch">
+        <button onclick="switchLang('pt')">PT</button>
+        <button onclick="switchLang('de')">DE</button>
+    </div>
+
+    <img src="foto-diego.jpg" alt="Diego Gmür">
+    <h1>Diego Gmür</h1>
+    <p>Bacharel em Direito • Empresário • Marca Pessoal</p>
+</header>
+
+<div class="container">
+
+<section data-lang="pt" class="active">
+    <h2>Apresentação</h2>
+    <p>
+        Diego Gmür é bacharel em Direito e empresário de destaque em Goiás, com sólida trajetória
+        internacional. Em 2019, decidiu deixar o Brasil em busca de novos desafios, estabelecendo-se
+        na Suíça, onde concluiu sua formação acadêmica em Direito e consolidou sua atuação profissional.
+    </p>
+    <p>
+        Com forte vivência multicultural, Diego construiu sua carreira aliando conhecimento jurídico,
+        visão estratégica e habilidade em relações profissionais. No âmbito pessoal, é casado com
+        Francielly Gmür e pai orgulhoso de um casal de filhos, valores que refletem equilíbrio entre
+        vida familiar e excelência profissional.
+    </p>
+</section>
+
+<section data-lang="de">
+    <h2>Vorstellung</h2>
+    <p>
+        Diego Gmür ist Jurist und Unternehmer mit einer ausgeprägten internationalen Laufbahn.
+        Im Jahr 2019 verließ er Brasilien, um neue Herausforderungen anzunehmen, und ließ sich
+        in der Schweiz nieder, wo er sein Jurastudium abschloss und seine berufliche Tätigkeit festigte.
+    </p>
+    <p>
+        Seine multikulturelle Erfahrung prägt seine strategische Denkweise, seine professionelle
+        Kommunikation und seine Fähigkeit, nachhaltige Geschäftsbeziehungen aufzubauen.
+        Privat ist er mit Francielly Gmür verheiratet und Vater von zwei Kindern.
+    </p>
+</section>
+
+<section>
+    <h2>Formação & Atuação</h2>
+    <ul>
+        <li>Bacharel em Direito</li>
+        <li>Atuação jurídica e empresarial</li>
+        <li>Experiência internacional (Brasil e Suíça)</li>
+        <li>Relacionamento profissional e negociação estratégica</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Idiomas</h2>
+    <ul>
+        <li>Português – Fluente</li>
+        <li>Espanhol – Fluente</li>
+        <li>Italiano – Fluente</li>
+        <li>Alemão – Fluente</li>
+        <li>Francês – Intermediário</li>
+        <li>Inglês – Básico</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Contato</h2>
+    <p>
+        📧 <strong>Email:</strong>
+        <a href="mailto:Diego.gmur.adv@outlook.com">Diego.gmur.adv@outlook.com</a>
+    </p>
+</section>
+
+</div>
+
+<footer>
+    © 2026 – Diego Gmür • Todos os direitos reservados
+</footer>
+
+</body>
+</html>
